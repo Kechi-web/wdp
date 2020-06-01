@@ -1,0 +1,708 @@
+// Colors:
+$t: #212121
+$l: #fff
+$btn: #00897b
+$act: #3949ab
+$bg-g: #e4fdf9
+html
+    width: 100%
+    height: 100%
+    overflow-x: hidden
+    body
+        width: 100%
+        height: 100%
+        font-family: 'Open Sans', sans-serif
+        font-weight: normal
+        font-style: normal
+        font-size: 15px
+        color: $t
+        background-color: $l
+        a
+            color: inherit
+        .title
+            font-size: 30px
+            font-weight: 700
+            line-height: 1.5
+            color: inherit
+        .subtitle
+            font-size: 20px
+            font-weight: 600
+            color: inherit
+        .text
+            margin-top: 20px
+            font-size: 15px
+            font-weight: normal
+            color: inherit
+            line-height: 1.5
+        .btn
+            display: inline-flex
+            justify-content: center
+            align-items: center
+            font-size: 20px
+            font-weight: 700
+            color: $l
+            padding: 15px 25px
+            background-color: transparent
+            text-transform: uppercase
+            border: 2px solid $l
+            transition: all .3s ease-in-out
+            &:hover
+                border: 2px solid $btn
+                background-color: $btn
+        .head
+            max-width: 700px
+            margin: 0 auto
+            text-align: center
+        .opa-bg
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+            z-index: -1
+            background-color: #000
+            opacity: 0.2
+        section
+            padding: 100px 0
+        .header
+            width: 100%
+            background-color: transparent
+            padding: 20px 0
+            color: $l
+            position: fixed
+            top: 0
+            left: 0
+            z-index: 1010
+            &-dark
+                background-color: $t
+                color: $l
+                opacity: 0.9
+                padding: 10px 0
+            &__logo
+                padding-bottom: 7px
+                h1
+                    color: inherit
+                    transition: all .2s
+                    &:hover
+                        color: $btn
+            nav
+                ul
+                    height: 100%
+                    margin-left: auto
+                    li
+                        color: inherit
+                        margin: 0 15px
+                        a
+                            transition: all .2s
+                            &:hover
+                                color: $btn
+        .intro
+            width: 100%
+            background-color: $l
+            background-image: url(../img/intro/bg.png)
+            background-repeat: no-repeat
+            background-position: center
+            background-size: cover
+            position: relative
+            min-height: 100vh
+            z-index: 1
+            padding: 280px 0 120px 0
+            text-align: center
+            color: $l
+            .title
+                font-size: 60px
+                color: inherit
+            .text
+                font-size: 22px
+                color: inherit
+                margin-top: 10px
+            .btn
+                display: inline-flex
+                margin: 100px 15px 300px 0
+            &__link-down
+                position: absolute
+                bottom: 0
+                left: 50%
+                text-align: center
+                font-size: 40px
+                font-weight: 700
+                transform: translateX(-50%)
+                animation: l-d 1.5s ease-in-out infinite
+                @keyframes l-d
+                    0%
+                        bottom: 0
+                    50%
+                        bottom: -10px
+                    100%
+                        bottom: 0
+        .about-us
+            width: 100%
+            background-color: $l
+            color: $t
+            text-align: center
+            .head
+                .text
+                    margin-bottom: 40px
+            &__item
+                margin-top: 40px
+                img
+                    width: 60px
+                    height: 60px
+                    margin: 35px 0
+        .services
+            background-color: $bg-g
+            width: 100%
+            color: $t
+            .head
+                margin-bottom: 100px
+            &__img
+                display: block
+                width: 50px
+                height: 60px
+                mask-image: url(../img/services/download.svg)
+                background-color: $t
+                -webkit-mask-repeat: no-repeat
+                -webkit-mask-size: cover
+                mask-position: center
+                transition: all .2s
+                margin-bottom: 30px
+            &__item
+                display: flex
+                flex-direction: column
+                align-items: center
+                justify-content: center
+                text-align: center
+                max-width: 320px
+                background-color: $l
+                padding: 50px
+                margin: 15px auto
+                transition: all .3s ease-in-out
+                .btn
+                    margin-top: 40px
+                    border: 2px solid $t
+                    color: $t
+                &:hover
+                    box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.35)
+                    background-color: $btn
+                    color: $l
+                    svg
+                        fill: $l
+                    .btn
+                        border: 2px solid $l
+                        color: $l
+                    .services__img
+                        background-color: $l
+        .works
+            width: 100%
+            color: $t
+            &__link
+                border: 2px solid $btn
+                background-color: $btn
+                padding: 20px 35px
+                margin-top: 100px
+                &:hover
+                    background-color: transparent
+                    color: $btn
+            &__tabs
+                // position: relative
+                // padding-bottom: 700px
+            &__tab
+                width: 100%
+                display: flex
+                flex-direction: column
+                justify-content: center
+                align-items: center
+                transition: all .5s
+                // position: absolute
+                // top: 0
+                // left: 0
+                &-links
+                    margin: 100px 0
+                &-link
+                    background-color: transparent
+                    border: 2px solid $btn 
+                    margin: 0px 10px
+                    color: inherit
+                    font-weight: 600
+                    cursor: pointer
+                    &:hover
+                        color: $l
+                    &-active
+                        color: $l
+                        background-color: $btn
+                &-item
+                    display: flex
+                    flex-direction: column
+                    justify-content: center
+                    align-items: center
+                    text-align: center
+                    width: 350px
+                    height: 350px
+                    margin: 15px auto
+                    cursor: pointer
+                    color: $l
+                    position: relative
+                    transition: all .3s
+                    &-bg
+                        position: absolute
+                        top: 0
+                        left: 0
+                        width: 100%
+                        height: 100%
+                        background-color: $l
+                        background-repeat: no-repeat
+                        background-image: url(../img/works/1.jpg)
+                        background-position: center
+                        background-size: cover
+                        z-index: -1
+                        &.bg1
+                            background-image: url(../img/works/1.jpg)
+                        &.bg2
+                            background-image: url(../img/works/2.png)
+                        &.bg3
+                            background-image: url(../img/works/3.png)
+                        &.bg4
+                            background-image: url(../img/works/4.png)
+                        &.bg5
+                            background-image: url(../img/works/5.png)
+                        &.bg6
+                            background-image: url(../img/works/6.png)
+                    .text
+                        margin-top: 0
+                    .title,.subtitle,.text,.btn
+                        opacity: 0
+                        transform: translateY(-50px)
+                        transition: all .3s ease-in-out
+                    &:hover
+                        background-color: rgba(0, 0, 0, 0.8)
+                        .title,.subtitle,.text,.btn
+                            opacity: 1
+                            transform: translateY(0px)
+            #tab-web,#tab-des,#tab-moc
+                display: none
+        .pricing
+            width: 100%
+            background-color: rgba(6, 12, 11, 0.1)
+            color: $t
+            text-align: center
+            &__item
+                background-color: $l
+                margin: 120px auto 0
+                max-width: 340px
+                overflow: hidden
+                cursor: pointer
+                transition: all .3s ease-in-out
+                &-head
+                    background-color: transparent
+                    padding: 50px 95px 60px 95px
+                    color: $l
+                    position: relative
+                    z-index: 2
+                    .subtitle
+                        font-size: 25px
+                        font-weight: normal
+                        margin: 0 auto
+                    .price
+                        display: inline-block
+                        margin: 40px auto 0
+                        font-size: 50px
+                        font-weight: normal
+                        position: relative
+                        span
+                            font-size: 17px
+                        &::before
+                            content: '$'
+                            font-size: 25px
+                            font-weight: normal
+                            position: absolute
+                            top: 0
+                            left: -15%
+                    &::after
+                        content: ''
+                        position: absolute
+                        top: -10%
+                        left: -10%
+                        width: 120%
+                        height: 100%
+                        background-color: $act
+                        z-index: -1
+                        transform: rotate(-5deg)
+                &-body
+                    background-color: transparent
+                    padding: 0px 95px 50px 90px
+                    .text
+                        padding: 15px 35px
+                        font-size: 17px
+                        font-weight: 300
+                        position: relative
+                        margin-top: 30px
+                        &::before
+                            content: ''
+                            position: absolute
+                            left: 0
+                            bottom: 0
+                            width: 100%
+                            height: 1px
+                            background-color: #000000
+                            opacity: 0.5
+                &-footer
+                    background-color: transparent
+                    padding: 0 75px 50px 75px
+                    .btn
+                        margin: 0
+                        border: 2px solid $t
+                        color: $t
+                        padding: 15px 20px
+                        font-size: 20px
+                        font-weight: 600
+                        text-align: center
+                        &:hover
+                            border: 2px solid $btn
+                            color: $l
+                &:hover
+                    box-shadow: 0px 3px 25px 0 rgba(0, 0, 0, 0.35)
+        .team
+            width: 100%
+            background-color: $l
+            color: $t
+            &__slider
+                margin-top: 120px
+                min-width: 0
+                position: relative
+                padding: 0 50px
+                &-item
+                    width: 100%
+                    text-align: center
+                    img
+                        max-width: 330px
+                        border-radius: 10px
+                        margin: 0 auto
+                    .subtitle
+                        margin-top: 40px
+                    .text
+                        margin-top: 10px
+                &-link
+                    display: inline-flex
+                    justify-content: center
+                    align-items: center
+                    margin: 35px 15px 0
+                    font-size: 28px
+                    color: $btn
+                    background-color: #f0f1f1
+                    border-radius: 10px
+                    width: 50px
+                    height: 50px
+                    flex: 0 0 50px
+                    transition: all .3s
+                    &:hover
+                        background-color: $act
+                        color: $l
+                &-social
+                    width: 85%
+                    margin-left: 5px
+                    margin-bottom: 100px
+                .slick-dots
+                	display: flex
+                	align-items: center
+                	justify-content: center
+                .slick-dots li
+                	list-style: none
+                	margin: 0 5px
+                .slick-dots button
+                	font-size: 0
+                	width: 15px
+                	height: 15px
+                	border-radius: 50%
+                	background-color: $btn
+                .slick-dots li.slick-active button
+                	background-color: $act
+                	border: 0
+        .blog
+            width: 100%
+            background-color: $bg-g
+            color: $t
+            .row
+                &:nth-child(2)
+                    margin-top: 120px
+                &:nth-child(3)
+                    .col-xl-6
+                        order: 2
+                        &:nth-child(2)
+                            order: 1
+            img
+                width: 100%
+                flex: 0 0 100%
+            .subtitle
+                padding-right: 30px
+                display: inline-block
+                font-size: 25px
+                transition: all .2s
+                margin-top: 60px
+                &:hover
+                    color: $btn
+            &__date
+                padding-right: 30px
+                margin: 25px 0
+                font-size: 17px
+                font-weight: 600
+                i
+                    margin-right: 10px
+                span
+                    margin-right: 40px
+            .btn
+                background-color: $btn
+                margin-top: 120px
+                border: 2px solid $btn
+                padding: 20px 30px
+                &:hover
+                    background-color: transparent
+                    color: $btn
+        .contact
+            width: 100%
+            background-color: $l
+            background-image: url(../img/contact/bg.png)
+            background-repeat: no-repeat
+            background-position: center
+            background-size: cover
+            position: relative
+            z-index: 1
+            color: $l
+            &__nav
+                text-align: center
+                &-icon
+                    margin: 100px auto 40px
+                    overflow: hidden
+                    display: flex
+                    justify-content: center
+                    align-items: center
+                    width: 105px
+                    height: 105px
+                    flex: 0 0 105px
+                    border-radius: 50%
+                    background-color: $act
+                    font-size: 60px
+                    i.fa-phone
+                        transform: scale(-1, 1)
+                a.subtitle
+                    display: block
+                    width: 80%
+                    margin: 7px auto
+                    &:hover
+                        text-decoration: underline
+            form
+                margin-top: 40px
+                width: 100%
+                .row
+                    width: 100%
+            &__in
+                margin-top: 40px
+                width: 100%
+                background-color: $l
+                border-radius: 10px
+                font-size: 20px
+                font-weight: 600
+                padding: 20px
+                max-height: 80px
+            &__ta
+                margin: 40px 0
+                width: 100%
+                textarea
+                    width: 100%
+                    background-color: $l
+                    border-radius: 10px
+                    font-size: 20px
+                    font-weight: 600
+                    padding: 20px
+                    max-height: 300px
+                    resize: none
+            button.btn
+                display: block
+                background-color: $l
+                border-radius: 10px
+                width: 220px
+                height: 70px
+                padding: 20px 60px
+                color: $t
+                border: 2px solid $l
+                margin-right: 13px
+                &:hover
+                    background-color: transparent
+                    color: $l
+        .footer
+            width: 100%
+            background-color: $l
+            padding: 22px 0
+            color: $t
+            .subtitle
+                font-weight: 700
+@media screen and ( max-width: 1199px )
+    html
+        body
+            .works
+                &__tab
+                    &-item
+                        width: 300px
+                        height: 300px
+@media screen and (max-width: 993px)
+    html
+        body
+            .header
+                &__logo
+                    z-index: 10
+                nav
+                    .burger
+                        display: flex
+                        justify-content: center
+                        align-items: flex-end
+                        flex-direction: column
+                        position: absolute
+                        top: 50%
+                        right: 10%
+                        width: 50px
+                        height: 50px
+                        transform: translate(-10%,-50%)
+                        background-color: transparent   
+                        cursor: pointer
+                        z-index: 1011
+                        span
+                            display: block
+                            width: 30px
+                            height: 4px
+                            border-radius: 10px
+                            background-color: $l
+                            transition: all .5s ease 0s
+                            &:nth-child(1)
+                                transform: translateY(-6px)
+                                width: 20px
+                            &:nth-child(3)
+                                transform: translateY(6px)
+                        &-act
+                            span
+                                background-color: $btn
+                                &:nth-child(1)
+                                    width: 30px
+                                &:nth-child(2)
+                                    width: 20px
+                                &:nth-child(3)
+                                    width: 12px
+                    ul
+                        position: fixed
+                        top: 0
+                        left: 0
+                        background-color: $t
+                        opacity: 1 
+                        height: 100vh
+                        width: 100%
+                        flex-direction: column
+                        justify-content: center
+                        align-items: center
+                        clip-path: circle(0px at 95% 5%)
+                        transition: all 1s ease-out 0s
+                        pointer-events: none
+                        text-align: center
+                        li
+                            margin: 15px !important
+                            width: 100%
+                            a
+                                display: block
+                                width: 100%
+                                padding: 10px 0px
+                        &.open
+                            clip-path: circle(1500px at 95% 5%)
+                            pointer-events: all
+                            li 
+                                margin: 5px 0
+                                width: 100%
+                                a
+                                    display: block
+                                    width: 100%
+                                    padding: 10px 0px
+            .pricing
+                &__item
+                    .price
+                        &::before
+                            left: -15%
+            .blog
+                .row
+                    margin-top: 30px
+                    &:nth-child(2)
+                        margin-top: 120px
+                &__date
+                    font-size: 14px
+                    i
+                        margin: 0
+                    span
+                        margin: 0 10px 0 5px
+@media screen and ( max-width: 768px )
+    html
+        body
+            section
+                padding: 60px 0
+            .intro
+                .title
+                    font-size: 54px
+            .works
+                &__tab
+                    &-item
+                        width: 250px
+                        height: 250px
+                    &-link
+                        display: inline-block
+                        text-align: center
+                        align-items: center
+                        width: 220px
+                        margin: 10px auto
+            .pricing
+                &__item
+                    position: relative
+                    &-head
+                        position: absolute
+                        top: 0
+                        left: 0
+                        transition: all .3s
+                    &-footer
+                        position: absolute
+                        bottom: 0
+                        left: 0
+                        width: 100%
+                        transition: all .3s
+                        padding: 0 0 30px 0
+                        .btn
+                            margin: 0 auto
+                    &-body
+                        opacity: 0
+                        padding-bottom: 0
+                        transition: all .3s
+                    &:hover
+                        padding: 225px 0 104px
+                        .pricing__item-body
+                            opacity: 1
+                            padding-bottom: 50px
+            .blog
+                padding-top: 20px
+                .row
+                    margin-top: 60px
+                    &:nth-child(2)
+                        margin-top: 120px
+                    &:nth-child(3)
+                        .col-12
+                            order: 1
+                            &:nth-child(2)
+                                order: 1
+                    .subtitle
+                        margin-top: 30px
+@media screen and ( max-width: 575px )
+    html
+        body
+            .about-us
+                &__item
+                    display: flex
+                    align-items: center
+                    &-text
+                        margin: 0 20px 0 40px
+                        text-align: left
+            .works
+                &__tab
+                    &-item
+                        width: 250px
+                        height: 250px
