@@ -329,22 +329,22 @@ html
                         transform: rotate(-5deg)
                 &-body
                     background-color: transparent
-                    padding: 0px 95px 50px 90px
+                    padding: 0px 0px 50px 0px
+                    width: 100%
                     .text
+                        display: inline-block
                         padding: 15px 35px
                         font-size: 17px
                         font-weight: 300
                         position: relative
                         margin-top: 30px
-                        &::before
-                            content: ''
-                            position: absolute
-                            left: 0
-                            bottom: 0
-                            width: 100%
-                            height: 1px
-                            background-color: #000000
-                            opacity: 0.5
+                    span
+                        display: block
+                        margin: 0 auto
+                        width: 180px
+                        height: 1px
+                        background-color: #000000
+                        opacity: 0.5
                 &-footer
                     background-color: transparent
                     padding: 0 75px 50px 75px
@@ -467,8 +467,8 @@ html
             position: relative
             z-index: 1
             color: $l
+            text-align: center
             &__nav
-                text-align: center
                 &-icon
                     margin: 100px auto 40px
                     overflow: hidden
@@ -490,7 +490,7 @@ html
                     &:hover
                         text-decoration: underline
             form
-                margin-top: 40px
+                margin: 40px 0 0 0
                 width: 100%
                 .row
                     width: 100%
@@ -543,9 +543,11 @@ html
                     &-item
                         width: 300px
                         height: 300px
-@media screen and (max-width: 993px)
+@media screen and (max-width: 1024px)
     html
         body
+            section
+                padding: 80px 0
             .header
                 &__logo
                     z-index: 10
@@ -623,16 +625,26 @@ html
                         &::before
                             left: -15%
             .blog
+                padding-top: 50px
                 .row
                     margin-top: 30px
                     &:nth-child(2)
-                        margin-top: 120px
+                        margin-top: 80px
                 &__date
                     font-size: 14px
                     i
                         margin: 0
                     span
                         margin: 0 10px 0 5px
+            .contact
+                &__nav
+                    &-icon
+                        margin: 60px auto 20px
+                        font-size: 45px
+                        width: 80px
+                        height: 80px
+                    a
+                        font-size: 16px
 @media screen and ( max-width: 768px )
     html
         body
@@ -641,8 +653,20 @@ html
             .intro
                 .title
                     font-size: 54px
+            .about-us
+                &__item
+                    margin-top: 0
+            .services
+                .head
+                    margin-bottom: 40px
+                &__item
+                    .btn
+                        font-size: 16px
+                        padding: 20px 20px
             .works
                 &__tab
+                    &-links
+                        margin: 20px 0 60px
                     &-item
                         width: 250px
                         height: 250px
@@ -651,10 +675,13 @@ html
                         text-align: center
                         align-items: center
                         width: 220px
-                        margin: 10px auto
+                        margin: 0px auto
+                .btn
+                    margin-top: 40px
             .pricing
                 &__item
                     position: relative
+                    margin-top: 40px
                     &-head
                         position: absolute
                         top: 0
@@ -683,7 +710,7 @@ html
                 .row
                     margin-top: 60px
                     &:nth-child(2)
-                        margin-top: 120px
+                        margin-top: 80px
                     &:nth-child(3)
                         .col-12
                             order: 1
@@ -691,6 +718,13 @@ html
                                 order: 1
                     .subtitle
                         margin-top: 30px
+                    .btn
+                        margin-top: 0
+            .contact
+                &__in
+                    margin: 10px 0
+                &__ta
+                    margin: 10px 0 20px 
 @media screen and ( max-width: 575px )
     html
         body
@@ -701,6 +735,12 @@ html
                     &-text
                         margin: 0 20px 0 40px
                         text-align: left
+            .services
+                &__item
+                    max-width: 100%
+                    .btn
+                        font-size: 20px
+                        padding: 15px 25px
             .works
                 &__tab
                     &-item

@@ -518,10 +518,12 @@ html body .pricing__item-head::after {
 
 html body .pricing__item-body {
   background-color: transparent;
-  padding: 0px 95px 50px 90px;
+  padding: 0px 0px 50px 0px;
+  width: 100%;
 }
 
 html body .pricing__item-body .text {
+  display: inline-block;
   padding: 15px 35px;
   font-size: 17px;
   font-weight: 300;
@@ -529,12 +531,10 @@ html body .pricing__item-body .text {
   margin-top: 30px;
 }
 
-html body .pricing__item-body .text::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
+html body .pricing__item-body span {
+  display: block;
+  margin: 0 auto;
+  width: 180px;
   height: 1px;
   background-color: #000000;
   opacity: 0.5;
@@ -741,9 +741,6 @@ html body .contact {
   position: relative;
   z-index: 1;
   color: #fff;
-}
-
-html body .contact__nav {
   text-align: center;
 }
 
@@ -785,7 +782,7 @@ html body .contact__nav a.subtitle:hover {
 }
 
 html body .contact form {
-  margin-top: 40px;
+  margin: 40px 0 0 0;
   width: 100%;
 }
 
@@ -855,7 +852,10 @@ html body .footer .subtitle {
   }
 }
 
-@media screen and (max-width: 993px) {
+@media screen and (max-width: 1024px) {
+  html body section {
+    padding: 80px 0;
+  }
   html body .header__logo {
     z-index: 10;
   }
@@ -965,11 +965,14 @@ html body .footer .subtitle {
   html body .pricing__item .price::before {
     left: -15%;
   }
+  html body .blog {
+    padding-top: 50px;
+  }
   html body .blog .row {
     margin-top: 30px;
   }
   html body .blog .row:nth-child(2) {
-    margin-top: 120px;
+    margin-top: 80px;
   }
   html body .blog__date {
     font-size: 14px;
@@ -980,6 +983,15 @@ html body .footer .subtitle {
   html body .blog__date span {
     margin: 0 10px 0 5px;
   }
+  html body .contact__nav-icon {
+    margin: 60px auto 20px;
+    font-size: 45px;
+    width: 80px;
+    height: 80px;
+  }
+  html body .contact__nav a {
+    font-size: 16px;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -988,6 +1000,19 @@ html body .footer .subtitle {
   }
   html body .intro .title {
     font-size: 54px;
+  }
+  html body .about-us__item {
+    margin-top: 0;
+  }
+  html body .services .head {
+    margin-bottom: 40px;
+  }
+  html body .services__item .btn {
+    font-size: 16px;
+    padding: 20px 20px;
+  }
+  html body .works__tab-links {
+    margin: 20px 0 60px;
   }
   html body .works__tab-item {
     width: 250px;
@@ -1000,10 +1025,14 @@ html body .footer .subtitle {
         -ms-flex-align: center;
             align-items: center;
     width: 220px;
-    margin: 10px auto;
+    margin: 0px auto;
+  }
+  html body .works .btn {
+    margin-top: 40px;
   }
   html body .pricing__item {
     position: relative;
+    margin-top: 40px;
   }
   html body .pricing__item-head {
     position: absolute;
@@ -1044,7 +1073,7 @@ html body .footer .subtitle {
     margin-top: 60px;
   }
   html body .blog .row:nth-child(2) {
-    margin-top: 120px;
+    margin-top: 80px;
   }
   html body .blog .row:nth-child(3) .col-12 {
     -webkit-box-ordinal-group: 2;
@@ -1058,6 +1087,15 @@ html body .footer .subtitle {
   }
   html body .blog .row .subtitle {
     margin-top: 30px;
+  }
+  html body .blog .row .btn {
+    margin-top: 0;
+  }
+  html body .contact__in {
+    margin: 10px 0;
+  }
+  html body .contact__ta {
+    margin: 10px 0 20px;
   }
 }
 
@@ -1073,6 +1111,13 @@ html body .footer .subtitle {
   html body .about-us__item-text {
     margin: 0 20px 0 40px;
     text-align: left;
+  }
+  html body .services__item {
+    max-width: 100%;
+  }
+  html body .services__item .btn {
+    font-size: 20px;
+    padding: 15px 25px;
   }
   html body .works__tab-item {
     width: 250px;
