@@ -1,6 +1,6 @@
 html {
-  width: 100%;
-  height: 100%;
+  min-width: 100%;
+  min-height: 100%;
   overflow-x: hidden;
 }
 
@@ -851,7 +851,7 @@ html body .footer .subtitle {
     height: 300px;
   }
   html body .team__slider-item img {
-    width: 280px;
+    width: 270px;
   }
 }
 
@@ -935,16 +935,18 @@ html body .footer .subtitle {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    -webkit-clip-path: circle(0px at 95% 5%);
-            clip-path: circle(0px at 95% 5%);
-    -webkit-transition: all 1s ease-out 0s;
-    transition: all 1s ease-out 0s;
-    pointer-events: none;
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+    -webkit-transition: all 0.4s ease-out 0s;
+    transition: all 0.4s ease-out 0s;
     text-align: center;
   }
   html body .header nav ul li {
     margin: 15px !important;
     width: 100%;
+    opacity: 0;
+    -webkit-transition: all 1.4s ease-out 0s;
+    transition: all 1.4s ease-out 0s;
   }
   html body .header nav ul li a {
     display: block;
@@ -952,18 +954,21 @@ html body .footer .subtitle {
     padding: 10px 0px;
   }
   html body .header nav ul.open {
-    -webkit-clip-path: circle(1500px at 95% 5%);
-            clip-path: circle(1500px at 95% 5%);
-    pointer-events: all;
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
   }
   html body .header nav ul.open li {
     margin: 5px 0;
     width: 100%;
+    opacity: 1;
   }
   html body .header nav ul.open li a {
     display: block;
     width: 100%;
     padding: 10px 0px;
+  }
+  html body .team__slider {
+    margin-top: 60px;
   }
   html body .pricing__item .price::before {
     left: -15%;
@@ -1000,6 +1005,9 @@ html body .footer .subtitle {
 @media screen and (max-width: 768px) {
   html body section {
     padding: 60px 0;
+  }
+  html body .intro {
+    padding-top: 180px;
   }
   html body .intro .title {
     font-size: 54px;
@@ -1069,6 +1077,14 @@ html body .footer .subtitle {
     opacity: 1;
     padding-bottom: 50px;
   }
+  html body .team__slider-social {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 100%;
+    padding: 0;
+    margin: 0 0px 40px -20px;
+  }
   html body .blog {
     padding-top: 20px;
   }
@@ -1103,6 +1119,25 @@ html body .footer .subtitle {
 }
 
 @media screen and (max-width: 575px) {
+  html body .header {
+    max-width: 574px;
+  }
+  html body .header__logo {
+    padding: 0;
+    text-align: right;
+  }
+  html body .header-dark {
+    padding-top: 10px;
+  }
+  html body .intro {
+    padding-top: 140px;
+  }
+  html body .intro .title {
+    font-size: 40px;
+  }
+  html body .intro .text {
+    font-size: 18px;
+  }
   html body .about-us__item {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1122,9 +1157,37 @@ html body .footer .subtitle {
     font-size: 20px;
     padding: 15px 25px;
   }
+  html body .works__tab .col-12 {
+    padding: 0;
+    max-width: 100%;
+  }
   html body .works__tab-item {
     width: 250px;
     height: 250px;
+  }
+  html body .works__tab-imgs {
+    max-width: 574px;
+  }
+}
+
+@media (max-width: 375px) {
+  html body .intro .title {
+    font-size: 33px;
+  }
+  html body .intro .text {
+    font-size: 16px;
+  }
+  html body .team__slider-item img {
+    width: 240px;
+  }
+}
+
+@media (max-width: 320px) {
+  html body .intro .title {
+    font-size: 28px;
+  }
+  html body .team__slider-item img {
+    width: 200px;
   }
 }
 /*# sourceMappingURL=style.css.map */
